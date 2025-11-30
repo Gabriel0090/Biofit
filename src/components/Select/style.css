@@ -1,6 +1,6 @@
 .custom-select {
   background-color: var(--background-input); 
-  color: var(--text-dark); 
+  color: var(--text-medium); 
   border: none;
   border-radius: 30px; 
   height: 50px;

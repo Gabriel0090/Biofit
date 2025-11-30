@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react"; 
 import { useNavigate } from 'react-router-dom'; 
 import PropTypes from 'prop-types';
-import Button from "../../components/Button";
 import "./style.css";
 
 import iconBmi from "../../assets/fogo.png";
@@ -55,18 +54,6 @@ export default function Perfil() {
 
   }, [navigate]); 
 
-  const handleEdit = () => {
-    // Leva o usuário de volta à página de "onboarding" para editar os dados
-    alert("Você será levado para a tela de edição de perfil.");
-    // Define a flag como false temporariamente para permitir a re-edição
-    const usuario = JSON.parse(localStorage.getItem('usuario'));
-    if(usuario) {
-      usuario.perfilCompleto = false;
-      localStorage.setItem('usuario', JSON.stringify(usuario));
-    }
-    navigate('/criar-conta');
-  };
-
   const handleLogout = () => {
     localStorage.removeItem('usuario');
     alert("Você foi desconectado.");
@@ -115,16 +102,7 @@ export default function Perfil() {
           <InfoItem label="Peso" value={`${userData.peso} kg`} />
           <InfoItem label="Altura" value={`${userData.altura} cm`} />
           <InfoItem label="Objetivo" value={userData.objetivo} />
-        </div>
-
-        <Button
-          type="button"
-          onClick={handleEdit}
-          className="perfil-edit-button" 
-        >
-          Editar Dados
-        </Button>
-     
+        </div>     
       </div>
 
       <button className="logout-button" onClick={handleLogout}>

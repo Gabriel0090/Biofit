@@ -5,7 +5,6 @@ import { NavLink } from "react-router-dom";
 import iconPerfil from "../../assets/do-utilizador.png";
 import iconCalculos from "../../assets/calculadora.png";
 import iconMacros from "../../assets/fatia-de-bolo.png"; 
-import iconHistorico from "../../assets/historia.png";
 import Logo from "../Logo";
 
 export default function Sidebar() {
@@ -51,17 +50,6 @@ export default function Sidebar() {
         </NavLink>
       </li>
 
-      <li>
-        <NavLink
-          to="/history"
-          className={({ isActive }) =>
-            isActive ? "nav-link active" : "nav-link"
-          }
-        >
-          <img src={iconHistorico} alt="Histórico" />
-          <span>Histórico</span>
-        </NavLink>
-      </li>
     </ul>
   </nav>
 </aside>

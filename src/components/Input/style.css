@@ -1,7 +1,7 @@
 /* src/components/Input/style.css */
 .custom-input {
-  background-color: var(--background-input); /* Branco */
-  color: var(--text-dark); /* Texto escuro */
+  background-color: var(--background-input);
+  color: #000000; /* Texto escuro */
   border: none;
   border-radius: 30px; /* Bem arredondado */
   height: 50px; /* Um pouco mais alto que antes */

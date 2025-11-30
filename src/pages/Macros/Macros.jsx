@@ -89,34 +89,8 @@ export default function Macros() {
       });
   };
 
-  const handleSalvar = () => {
-    localStorage.setItem('resultados', JSON.stringify(resultados));
-    localStorage.setItem('usuarioDados', JSON.stringify(usuario))
-    
-    const planoCustomizado = {
-      calorias: resultados.caloriasObjetivo,
-      macros: macros,
-      tipo: "customizado",
-      objetivo: usuario.objetivo,
-      peso: usuario.peso,
-      altura: usuario.altura,
-      idade: usuario.idade,
-      sexo: usuario.sexo,
-      geradoEm: new Date().toISOString()
-    };
-
-    localStorage.setItem('planoAlimentarAtual', JSON.stringify(planoCustomizado));
-    
-    const historico = JSON.parse(localStorage.getItem('historicoPlanos')) || [];
-    historico.push(planoCustomizado);
-    localStorage.setItem('historicoPlanos', JSON.stringify(historico));
-    
-    alert('Plano alimentar salvo com sucesso!');
-  }
-
   const HandleEdit = () => {
     if (edit) {
-      handleSalvar();
     }
     setEdit(!edit);
   }
@@ -141,7 +115,7 @@ export default function Macros() {
               <option value="Ganhar Massa">Ganhar Massa (Superávit)</option>
             </Select>
           </div>
-          <Button type="submit" onClick = {HandleEdit}>{edit ? 'Salvar' : 'Editar'}</Button>
+          <Button type="submit" onClick = {HandleEdit}>{edit ? 'Encerrar cálculo' : 'Editar'}</Button>
         </div>
           
         <div className="plano-card">
