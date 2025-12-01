@@ -75,6 +75,19 @@
       "pass": "1234",
       "perfilCompleto": false,
       "id": 7
+    },
+    {
+      "nome": "Fulano da Silva",
+      "email": "exemplo1@gmail.com",
+      "pass": "1234",
+      "perfilCompleto": true,
+      "id": 8,
+      "sexo": "Outro",
+      "idade": 21,
+      "peso": 70,
+      "altura": 183,
+      "objetivo": "Ganhar Massa",
+      "imc": "20.9"
     }
   ],
   "history": [
@@ -234,6 +247,16 @@
       "resultadoCalorias": "1364",
       "resultadoImc": "26.9",
       "id": 15
+    },
+    {
+      "userId": 8,
+      "date": "01/12/2025",
+      "timestamp": "2025-12-01T18:54:44.233Z",
+      "peso": 70,
+      "objetivo": "Ganhar Massa",
+      "resultadoCalorias": "2244",
+      "resultadoImc": "20.9",
+      "id": 16
     }
   ]
 }
